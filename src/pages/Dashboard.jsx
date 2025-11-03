@@ -6,17 +6,17 @@ const mockRestaurants = [
    {
       id: 1,
       name: 'Spice Villa',
-      image: '/src/assets/restaurants/spice-villa.jpg',
+      image: '/assets/restaurants/spice-villa.jpg',
    },
    {
       id: 2,
       name: 'Urban Tadka',
-      image: 'src/assets/restaurants/urban-tadka.jpg',
+      image: '/assets/restaurants/urban-tadka.jpg',
    },
    {
       id: 3,
       name: 'Café Nirvana',
-      image: 'src/assets/restaurants/cafe-nirvana.jpg',
+      image: '/assets/restaurants/cafe-nirvana.jpg',
    },
 ];
 
