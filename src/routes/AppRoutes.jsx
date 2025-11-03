@@ -3,9 +3,10 @@ import Login from '../pages/Login';
 import OTP from '../pages/OTP';
 import Dashboard from '../pages/Dashboard';
 import RestaurantDetail from '../pages/RestaurantDetail';
+import { isLoggedIn } from '../utils/auth';
 
 const AppRoutes = () => {
-  const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
 
   return (
     <Router>
@@ -14,11 +15,11 @@ const AppRoutes = () => {
         <Route path="/otp" element={<OTP />} />
         <Route
           path="/dashboard"
-          element={isLoggedIn ? <Dashboard /> : <Navigate to="/" />}
+          element={isLoggedIn() ? <Dashboard /> : <Navigate to="/" />}
         />
         <Route
           path="/restaurant/:id"
-          element={isLoggedIn ? <RestaurantDetail /> : <Navigate to="/" />}
+          element={isLoggedIn() ? <RestaurantDetail /> : <Navigate to="/" />}
         />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

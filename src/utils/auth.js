@@ -1,5 +1,6 @@
 // Check if user is logged in
 export const isLoggedIn = () => {
+   console.log(localStorage.getItem('isLoggedIn'));
   return localStorage.getItem('isLoggedIn') === 'true';
 };
 
